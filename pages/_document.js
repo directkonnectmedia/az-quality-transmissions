@@ -11,7 +11,7 @@ class CustomDocument extends Document {
           ></meta>
           <link
             rel="icon"
-            href="/az-quality-logo.png"
+            href="/az-quality-logo-transparent.png"
             type="image/png"
           ></link>
           <meta name="theme-color" content="#dc2626"></meta>

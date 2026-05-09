@@ -2068,12 +2068,36 @@
   z-index: 3;
 }
 .hero-concrete-brand {
-  display: flex;
+  position: relative;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 18px;
-  margin-bottom: 0;
   flex-wrap: wrap;
+  gap: 18px;
+  margin-inline: auto;
+  margin-bottom: 0;
+  padding: clamp(40px, 10vw, 100px)
+    clamp(28px, 6vw, 72px)
+    clamp(36px, 9vw, 92px)
+    clamp(28px, 6vw, 72px);
+  isolation: isolate;
+}
+.hero-concrete-brand::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: min(980px, calc(100% + clamp(96px, 18vw, 200px)));
+  height: auto;
+  aspect-ratio: 1;
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0) 70%
+  );
+  z-index: 0;
+  pointer-events: none;
 }
 .hero-concrete-logo {
   width: auto;
@@ -2082,8 +2106,13 @@
   max-height: clamp(120px, 20vw, 240px);
   display: block;
   object-fit: contain;
+  position: relative;
+  z-index: 1;
+  border: none;
+  outline: none;
+  box-shadow: none;
   background: transparent;
-  filter: drop-shadow(0 4px 18px rgba(0, 0, 0, 0.55));
+  filter: drop-shadow(0 3px 12px rgba(0, 0, 0, 0.3));
 }
 .hero-concrete-main-title {
   font-size: clamp(2rem, 5.5vw, 4.25rem) !important;
@@ -3022,6 +3051,13 @@ video {
   .hero-concrete-brand {
     flex-direction: column;
     gap: 14px;
+    padding: clamp(28px, 12vw, 64px)
+      clamp(14px, 5vw, 28px)
+      clamp(26px, 10vw, 52px)
+      clamp(14px, 5vw, 28px);
+  }
+  .hero-concrete-brand::before {
+    width: min(calc(100vw - 48px), calc(100% + clamp(64px, 18vw, 120px)));
   }
   .hero-concrete-logo {
     height: auto;

@@ -42,7 +42,7 @@ const Home = (props) => {
           <div className="hero-concrete-content">
             <div className="hero-concrete-brand">
               <img
-                src="/az-quality-logo.png"
+                src="/az-quality-logo-transparent.png"
                 alt="AZ Quality Transmissions logo"
                 className="hero-concrete-logo"
               />

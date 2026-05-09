@@ -13,7 +13,7 @@ const Footer = (props) => {
               <div className="footer-brand footer-column">
                 <div className="footer-brand-row">
                   <img
-                    src="/az-quality-logo.png"
+                    src="/az-quality-logo-transparent.png"
                     alt="AZ Quality Transmissions logo"
                     className="footer-brand-logo"
                   />

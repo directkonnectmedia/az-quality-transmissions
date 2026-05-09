@@ -14,7 +14,7 @@ const Navigation = (props) => {
               <a className="navigation-brand-link">
                 <div className="navigation-brand">
                   <img
-                    src="/az-quality-logo.png"
+                    src="/az-quality-logo-transparent.png"
                     alt="AZ Quality Transmissions logo"
                     className="navigation-brand-logo"
                   />
@@ -83,7 +83,7 @@ const Navigation = (props) => {
               <a className="navigation-brand-link">
                 <div className="navigation-brand">
                   <img
-                    src="/az-quality-logo.png"
+                    src="/az-quality-logo-transparent.png"
                     alt="AZ Quality Transmissions logo"
                     className="navigation-brand-logo"
                   />
