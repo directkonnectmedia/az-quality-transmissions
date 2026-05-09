@@ -4,4 +4,4 @@ Disallow: /nogooglebot/
 User-agent: *
 Allow: /
 
-Sitemap: https://phx-junk-removal.vercel.app/sitemap.xml
+Sitemap: https://az-quality-transmissions.vercel.app/sitemap.xml

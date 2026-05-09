@@ -12,8 +12,27 @@ const Home = (props) => {
     <>
       <div className="home-container1">
         <Head>
-          <title>PHX Junk Removal</title>
-          <meta property="og:title" content="PHX Junk Removal" />
+          <title>
+            AZ Quality Transmissions &amp; Auto Repair | Glendale AZ
+          </title>
+          <meta
+            name="description"
+            content="Transmission repair, rebuilds, and maintenance in Glendale, AZ. 40+ years experience, free diagnostics, and 2-year unlimited mileage warranty."
+          />
+          <meta property="og:title" content="AZ Quality Transmissions & Auto Repair | Glendale AZ" />
+          <meta
+            property="og:description"
+            content="Transmission repair, rebuilds, and maintenance in Glendale, AZ. 40+ years experience, free diagnostics, and 2-year unlimited mileage warranty."
+          />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta
+            name="twitter:title"
+            content="AZ Quality Transmissions & Auto Repair | Glendale AZ"
+          />
+          <meta
+            name="twitter:description"
+            content="Transmission repair, rebuilds, and maintenance in Glendale, AZ. 40+ years experience, free diagnostics, and 2-year unlimited mileage warranty."
+          />
         </Head>
         <Navigation></Navigation>
         <section id="home" className="hero-concrete">
@@ -33,52 +52,30 @@ const Home = (props) => {
             <div className="hero-concrete-brand">
               <img
                 src="/phx-logo.png"
-                alt="PHX Junk Removal logo"
+                alt="AZ Quality Transmissions logo"
                 className="hero-concrete-logo"
               />
-              <h1 className="hero-concrete-main-title hero-title">
-                PHX JUNK REMOVAL
-              </h1>
             </div>
+            <h1 className="hero-concrete-main-title hero-title">
+              Expert Transmission Repair &amp; Rebuilds in Glendale
+            </h1>
             <p className="hero-concrete-sub hero-subtitle">
-              FAST, RELIABLE JUNK REMOVAL — WE HAUL SO YOU CAN RELAX.
+              Family-owned with 40+ years of combined experience. Specialized in
+              foreign and domestic vehicles with an industry-leading 2-year
+              warranty.
             </p>
             <div className="hero-concrete-actions">
               <a href="#contact">
                 <div className="btn-xl hero-concrete-btn btn btn-accent">
-                  <span>REQUEST AN ESTIMATE</span>
+                  <span>GET MY FREE ESTIMATE</span>
                 </div>
               </a>
-              <a href="#gallery">
+              <a href="tel:6232813331">
                 <div className="btn-xl btn-outline hero-concrete-btn btn">
-                  <span>VIEW OUR WORK</span>
+                  <span>CALL (623) 281-3331</span>
                 </div>
               </a>
             </div>
-            <a href="tel:623300447" className="hero-concrete-phone-link">
-              <div className="hero-concrete-phone">
-                <span className="hero-concrete-phone-icon">
-                  <svg
-                    width="22"
-                    xmlns="http://www.w3.org/2000/svg"
-                    height="22"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233a14 14 0 0 0 6.392 6.384"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    ></path>
-                  </svg>
-                </span>
-                <span className="hero-concrete-phone-text">
-                  CALL NOW: 623-300-447
-                </span>
-              </div>
-            </a>
           </div>
         </section>
         <section id="services" className="expertise-grid expertise-how-it-works">
@@ -87,28 +84,82 @@ const Home = (props) => {
             <div className="expertise-layout">
               <div className="expertise-card">
                 <div className="expertise-card-content">
-                  <h3 className="section-subtitle">01. JOB EVALUATION</h3>
+                  <h3 className="section-subtitle">01. DIAGNOSTICS &amp; ESTIMATE</h3>
                   <p className="section-content">
-                    We review photos or a quick description, estimate volume and
-                    labor, and give you a clear price range before we schedule.
+                    Complimentary transmission checks plus computer diagnostics
+                    where needed—we explain findings and outline options before any
+                    work begins.
                   </p>
                 </div>
               </div>
               <div className="expertise-card">
                 <div className="expertise-card-content">
-                  <h3 className="section-subtitle">02. IN-PERSON MEETING</h3>
+                  <h3 className="section-subtitle">02. AUTHORIZED REPAIR OR REBUILD</h3>
                   <p className="section-content">
-                    We walk the property together, confirm access and what stays
-                    or goes, then lock in a firm quote and pickup window.
+                    After you approve the plan, specialists rebuild or repair with
+                    quality parts and disciplined procedures—focused on longevity.
                   </p>
                 </div>
               </div>
               <div className="expertise-card">
                 <div className="expertise-card-content">
-                  <h3 className="section-subtitle">03. JOB COMPLETION</h3>
+                  <h3 className="section-subtitle">03. ROAD-TESTED QUALITY</h3>
                   <p className="section-content">
-                    Crew loads out fast, sweeps the area, and disposes or donates
-                    items responsibly so you&apos;re left with a clean space.
+                    Every vehicle is road-tested, results reviewed with you, and
+                    backed by our 2-year unlimited mileage warranty where
+                    applicable.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section
+          aria-labelledby="value-propositions-heading"
+          className="expertise-grid value-propositions"
+        >
+          <div className="expertise-container">
+            <h2
+              id="value-propositions-heading"
+              className="expertise-heading section-title"
+            >
+              WHY DRIVERS CHOOSE US
+            </h2>
+            <div className="expertise-layout">
+              <div className="expertise-card">
+                <div className="expertise-card-content">
+                  <h3 className="section-subtitle">FREE BASIC DIAGNOSTICS</h3>
+                  <p className="section-content">
+                    No-cost transmission checks so you understand what your
+                    vehicle needs before committing to Transmission &amp; Auto
+                    Repair work.
+                  </p>
+                </div>
+              </div>
+              <div className="expertise-card">
+                <div className="expertise-card-content">
+                  <h3 className="section-subtitle">FREE TOWING</h3>
+                  <p className="section-content">
+                    Complimentary towing up to 10 miles when you authorize major
+                    Transmission &amp; Auto Repair services with our shop.
+                  </p>
+                </div>
+              </div>
+              <div className="expertise-card">
+                <div className="expertise-card-content">
+                  <h3 className="section-subtitle">FINANCING AVAILABLE</h3>
+                  <p className="section-content">
+                    Flexible payment options designed to take the stress out of
+                    major Transmission &amp; Auto Repair and rebuild projects.
+                  </p>
+                </div>
+              </div>
+              <div className="expertise-card">
+                <div className="expertise-card-content">
+                  <h3 className="section-subtitle">2-YEAR UNLIMITED MILE WARRANTY</h3>
+                  <p className="section-content">
+                    Industry-leading warranty coverage—ask us how it applies to
+                    your Transmission &amp; Auto Repair estimate.
                   </p>
                 </div>
               </div>
@@ -122,28 +173,28 @@ const Home = (props) => {
           <div className="gallery-scroller">
             <div className="gallery-item">
               <img
-                alt="PHX Junk Removal project photo 1"
+                alt="Transmission &amp; Auto Repair shop workspace"
                 src="https://images.pexels.com/photos/37121405/pexels-photo-37121405.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1500"
                 loading="lazy"
               />
             </div>
             <div className="gallery-item">
               <img
-                alt="PHX Junk Removal project photo 2"
+                alt="Transmission rebuild and repair service bay"
                 src="https://images.pexels.com/photos/37121400/pexels-photo-37121400.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1500"
                 loading="lazy"
               />
             </div>
             <div className="gallery-item">
               <img
-                alt="PHX Junk Removal project photo 3"
+                alt="Diagnostic and fluid service for transmissions"
                 src="https://images.pexels.com/photos/37121406/pexels-photo-37121406.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1500"
                 loading="lazy"
               />
             </div>
             <div className="gallery-item">
               <img
-                alt="PHX Junk Removal project photo 4"
+                alt="Heavy-duty Transmission &amp; Auto Repair readiness"
                 src="https://images.pexels.com/photos/2469/building-construction-building-site-constructing.jpg?auto=compress&amp;cs=tinysrgb&amp;w=1500"
                 loading="lazy"
               />
@@ -158,28 +209,28 @@ const Home = (props) => {
                 CLIENT REVIEWS
               </h2>
               <p className="testimonials-subtitle">
-                Trusted by Arizona homeowners.
+                Trusted transmission &amp; auto repair specialists for Arizona drivers.
               </p>
             </div>
             <div className="testimonials-grid">
               <figure className="testimonial-card">
                 <span className="testimonial-quote-mark">&ldquo;</span>
                 <blockquote className="testimonial-quote">
-                  PHX Junk Removal cleared our retail back room in one morning.
-                  Heavy fixtures, pallets, and old displays — all gone. Fair
-                  price and the crew was careful with our floors.
+                  AZ Quality Transmissions rebuilt the transmission on our
+                  delivery vans ahead of schedule. Clear pricing and the 2-year
+                  warranty matters when you run a fleet in the Valley.
                 </blockquote>
                 <figcaption className="testimonial-meta">
                   <span className="testimonial-author">MARK R.</span>
-                  <span className="testimonial-role">Retail Manager</span>
+                  <span className="testimonial-role">Fleet Manager</span>
                 </figcaption>
               </figure>
               <figure className="testimonial-card">
                 <span className="testimonial-quote-mark">&ldquo;</span>
                 <blockquote className="testimonial-quote">
-                  Best cleanout we&apos;ve had after a garage and patio
-                  overhaul. They showed up on time, separated donate-able items,
-                  and left the driveway cleaner than they found it.
+                  My SUV was slipping between gears—they ran complimentary
+                  diagnostics, explained exactly what failed, and the rebuild has
+                  been flawless through summer heat.
                 </blockquote>
                 <figcaption className="testimonial-meta">
                   <span className="testimonial-author">SARAH L.</span>
@@ -189,25 +240,25 @@ const Home = (props) => {
               <figure className="testimonial-card">
                 <span className="testimonial-quote-mark">&ldquo;</span>
                 <blockquote className="testimonial-quote">
-                  Professional from the first call to the last box on the truck.
-                  They handled a full estate cleanout with empathy and zero
-                  surprise fees — exactly what our family needed.
+                  Professional from diagnosis to pickup. Financing made a major
+                  rebuild manageable and the team communicated every milestone—our
+                  family car feels brand new again.
                 </blockquote>
                 <figcaption className="testimonial-meta">
                   <span className="testimonial-author">DAVID K.</span>
-                  <span className="testimonial-role">Estate Coordinator</span>
+                  <span className="testimonial-role">Peoria Family</span>
                 </figcaption>
               </figure>
               <figure className="testimonial-card">
                 <span className="testimonial-quote-mark">&ldquo;</span>
                 <blockquote className="testimonial-quote">
-                  We&apos;ve used PHX Junk Removal on three rental turnovers.
-                  Fast response, consistent pricing, and they actually show up
-                  when they say they will. Our go-to in the Valley.
+                  We route every Phoenix-area rollover and warranty concern to AZ
+                  Quality. Honest timelines, towing help on big jobs, and
+                  technicians who actually specialize in transmissions.
                 </blockquote>
                 <figcaption className="testimonial-meta">
                   <span className="testimonial-author">JASON M.</span>
-                  <span className="testimonial-role">Property Manager</span>
+                  <span className="testimonial-role">Dealership Liaison</span>
                 </figcaption>
               </figure>
             </div>
@@ -218,8 +269,8 @@ const Home = (props) => {
             <div className="quote-wizard-header">
               <h2 className="section-title">GET A QUOTE</h2>
               <p className="section-content">
-                Arizona&apos;s trusted junk removal team. Tell us what you need
-                hauled — one step at a time.
+                Arizona&apos;s trusted Transmission &amp; Auto Repair specialists.
+                Tell us about your vehicle—we&apos;ll follow up quickly.
               </p>
             </div>
             <div className="quote-progress">
@@ -247,10 +298,10 @@ const Home = (props) => {
             >
               <div className="quote-step is-active" data-step="1">
                 <span className="quote-step-label">
-                  STEP 1: WHAT KIND OF SERVICE DO YOU NEED?
+                  STEP 1: WHAT TYPE OF TRANSMISSION &amp; AUTO REPAIR DO YOU NEED?
                 </span>
                 <p className="quote-step-hint">
-                  Select the option that best matches your cleanout or haul-away.
+                  Pick the Transmission &amp; Auto Repair lane that fits your vehicle.
                 </p>
                 <div className="quote-card-grid">
                   <label className="quote-service-card">
@@ -276,9 +327,12 @@ const Home = (props) => {
                           <path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6" />
                         </svg>
                       </span>
-                      <span className="quote-service-title">RESIDENTIAL SERVICE</span>
+                      <span className="quote-service-title">
+                        TRANSMISSION REBUILDS &amp; REPAIR
+                      </span>
                       <span className="quote-service-desc">
-                        Homes, garages, yards &amp; single-item pickups
+                        Automatic, manual, and CVT service tailored to passenger
+                        cars and SUVs
                       </span>
                     </div>
                   </label>
@@ -300,9 +354,11 @@ const Home = (props) => {
                           <path d="M4 20l8-16 8 16M8 20l4-8 4 8" />
                         </svg>
                       </span>
-                      <span className="quote-service-title">COMMERCIAL SERVICE</span>
+                      <span className="quote-service-title">
+                        TRUCK &amp; FLEET SERVICES
+                      </span>
                       <span className="quote-service-desc">
-                        Offices, retail, warehouses &amp; job-site debris
+                        Heavy-duty and commercial Transmission &amp; Auto Repair coverage
                       </span>
                     </div>
                   </label>
@@ -324,7 +380,11 @@ const Home = (props) => {
                           <path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z" />
                         </svg>
                       </span>
-                      <span className="quote-service-title">CUSTOM WORK</span>
+                      <span className="quote-service-title">GENERAL AUTO CARE</span>
+                      <span className="quote-service-desc">
+                        Computer diagnostics and bumper-to-bumper maintenance wrapped
+                        into Transmission &amp; Auto Repair appointments
+                      </span>
                     </div>
                   </label>
                 </div>
@@ -381,7 +441,7 @@ const Home = (props) => {
                       <input
                         type="tel"
                         name="phone"
-                        placeholder="(623) 300-447"
+                        placeholder="(623) 281-3331"
                         className="quote-input"
                       />
                     </div>
@@ -392,7 +452,7 @@ const Home = (props) => {
                     </label>
                     <textarea
                       name="details"
-                      placeholder="What needs to be removed, approximate volume, access (stairs, gate), and any donation or recycle preferences…"
+                      placeholder="Year, make, model, symptoms, noises, warning lights, towing needs, and mileage…"
                       className="quote-input quote-textarea"
                     ></textarea>
                   </div>
@@ -421,7 +481,7 @@ const Home = (props) => {
               <div className="quote-step" data-step="3">
                 <span className="quote-step-label">STEP 3: TIMELINE</span>
                 <p className="quote-step-hint">
-                  When do you need items removed?
+                  When do you need Transmission &amp; Auto Repair scheduled?
                 </p>
                 <div className="quote-timeline-grid">
                   <label className="quote-timeline-card">
@@ -502,11 +562,11 @@ const Home = (props) => {
                   </span>
                   <h3 className="quote-success-title">REQUEST RECEIVED</h3>
                   <p className="quote-success-text">
-                    Thank you. We&apos;ll be in touch within 24 hours to
-                    confirm details and schedule a free on-site estimate.
+                    Thank you. We&apos;ll be in touch within 24 hours to confirm
+                    details for your Transmission &amp; Auto Repair visit.
                   </p>
-                  <a href="tel:623300447" className="quote-success-phone">
-                    Or call us now: 623-300-447
+                  <a href="tel:6232813331" className="quote-success-phone">
+                    Or call us now: (623) 281-3331
                   </a>
                 </div>
               </div>
@@ -519,13 +579,14 @@ const Home = (props) => {
               <div className="location-content">
                 <span className="location-eyebrow">SERVICE AREA</span>
                 <h2 className="section-title location-title">
-                  SERVING GREATER PHOENIX
+                  GLENDALE HQ &amp; WEST VALLEY COVERAGE
                 </h2>
                 <p className="location-description">
-                  Arizona&apos;s trusted junk removal team. Based in Phoenix, we
-                  cover the Valley and surrounding communities.
+                  Family-owned Transmission &amp; Auto Repair from 5600 Grand Ave
+                  with mobile support across Glendale, Peoria, El Mirage, Sun City
+                  West, Scottsdale, Phoenix, and Avondale.
                 </p>
-                <a href="tel:623300447" className="location-phone-link">
+                <a href="tel:6232813331" className="location-phone-link">
                   <span className="location-phone-icon">
                     <svg
                       width="22"
@@ -541,10 +602,11 @@ const Home = (props) => {
                       <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233a14 14 0 0 0 6.392 6.384" />
                     </svg>
                   </span>
-                  <span className="location-phone">623-300-447</span>
+                  <span className="location-phone">(623) 281-3331</span>
                 </a>
                 <p className="location-status">
-                  Licensed, Bonded &amp; Insured
+                  Mon–Fri 8am–5pm · Sat 8am–3pm · Sun Closed · Licensed, Bonded
+                  &amp; Insured
                 </p>
                 <a href="#contact" className="location-cta-link">
                   <div className="btn-lg location-cta btn btn-accent">
@@ -570,7 +632,7 @@ const Home = (props) => {
         <div className="home-container4">
           <div className="home-container5">
             <Script
-              html={`<script defer data-name="phx-junk-logic">
+              html={`<script defer data-name="azqt-site-logic">
 (function(){
   // Reveal-on-scroll for cards
   const observerOptions = { threshold: 0.1 }

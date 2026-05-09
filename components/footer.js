@@ -14,23 +14,23 @@ const Footer = (props) => {
                 <div className="footer-brand-row">
                   <img
                     src="/phx-logo.png"
-                    alt="PHX Junk Removal logo"
+                    alt="AZ Quality Transmissions logo"
                     className="footer-brand-logo"
                   />
                   <h2 className="footer-logo section-title">
-                    PHX JUNK REMOVAL
+                    AZ QUALITY TRANSMISSIONS
                   </h2>
                 </div>
                 <p className="footer-mission section-content">
-                  Arizona&apos;s trusted junk removal team. Commercial and
-                  residential. Fast, thorough cleanouts with same-day options when
-                  available. Licensed and insured.
+                  Family-owned Transmission &amp; Auto Repair in Glendale. Free basic
+                  diagnostics, complimentary towing within 10 miles on major repairs,
+                  and a 2-year unlimited mileage warranty.
                 </p>
               </div>
               <div className="footer-column footer-contact">
                 <h3 className="footer-heading">CONTACT US</h3>
                 <div className="footer-contact-info">
-                  <a href="tel:623300447">
+                  <a href="tel:6232813331">
                     <div className="footer-phone-link">
                       <span className="footer-icon-wrapper">
                         <svg
@@ -49,10 +49,10 @@ const Footer = (props) => {
                           ></path>
                         </svg>
                       </span>
-                      <span>623-300-447</span>
+                      <span>(623) 281-3331</span>
                     </div>
                   </a>
-                  <a href="mailto:info@ropersconcrete.com">
+                  <a href="https://maps.google.com/?q=5600+Grand+Ave,+Glendale,+AZ+85301">
                     <div className="footer-email-link">
                       <span className="footer-icon-wrapper">
                         <svg
@@ -68,14 +68,38 @@ const Footer = (props) => {
                             strokeLinecap="round"
                             strokeLinejoin="round"
                           >
-                            <rect x="2" y="4" width="20" height="16" rx="2"></rect>
-                            <path d="M22 6L12 13L2 6"></path>
+                            <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path>
+                            <circle r="3" cx="12" cy="10"></circle>
                           </g>
                         </svg>
                       </span>
-                      <span>info@ropersconcrete.com</span>
+                      <span>5600 Grand Ave, Glendale, AZ 85301</span>
                     </div>
                   </a>
+                  <div className="footer-address">
+                    <span className="footer-icon-wrapper">
+                      <svg
+                        width="24"
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="24"
+                        viewBox="0 0 24 24"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        >
+                          <circle cx="12" cy="12" r="10"></circle>
+                          <path d="M12 6v6l4 2"></path>
+                        </g>
+                      </svg>
+                    </span>
+                    <p className="section-content footer-address-text">
+                      Mon–Fri 8am–5pm · Sat 8am–3pm · Sun Closed
+                    </p>
+                  </div>
                   <div className="footer-address">
                     <span className="footer-icon-wrapper">
                       <svg
@@ -97,7 +121,8 @@ const Footer = (props) => {
                       </svg>
                     </span>
                     <p className="section-content footer-address-text">
-                      Serving Greater Phoenix &amp; Surrounding Communities (623)
+                      Service area: Glendale, Peoria, El Mirage, Sun City West,
+                      Scottsdale, Phoenix, Avondale
                     </p>
                   </div>
                 </div>
@@ -208,7 +233,7 @@ const Footer = (props) => {
               <div className="footer-divider"></div>
               <div className="footer-legal">
                 <p>
-                  © 2026 PHX Junk Removal. All Rights Reserved. Licensed,
+                  © 2026 AZ Quality Transmissions. All Rights Reserved. Licensed,
                   Bonded &amp; Insured.
                 </p>
               </div>

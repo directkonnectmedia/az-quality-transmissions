@@ -1,7 +1,7 @@
-# PHX Junk Removal
+# AZ Quality Transmissions
 
-Greater Phoenix junk removal. Residential and commercial cleanouts, hauling, and responsible disposal.
+Transmission repair, rebuilds, and maintenance in Glendale, AZ. 40+ years of combined experience, free basic diagnostics, and a 2-year unlimited mileage warranty.
 
 ## Official site
 
-- [PHX Junk Removal](https://phx-junk-removal.vercel.app)
+- [AZ Quality Transmissions](https://az-quality-transmissions.vercel.app)

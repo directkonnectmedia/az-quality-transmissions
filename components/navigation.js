@@ -15,11 +15,11 @@ const Navigation = (props) => {
                 <div className="navigation-brand">
                   <img
                     src="/phx-logo.png"
-                    alt="PHX Junk Removal logo"
+                    alt="AZ Quality Transmissions logo"
                     className="navigation-brand-logo"
                   />
                   <span className="navigation-logo-text">
-                    PHX JUNK REMOVAL
+                    AZ QUALITY TRANSMISSIONS
                   </span>
                 </div>
               </a>
@@ -84,11 +84,11 @@ const Navigation = (props) => {
                 <div className="navigation-brand">
                   <img
                     src="/phx-logo.png"
-                    alt="PHX Junk Removal logo"
+                    alt="AZ Quality Transmissions logo"
                     className="navigation-brand-logo"
                   />
                   <span className="navigation-logo-text">
-                    PHX JUNK REMOVAL
+                    AZ QUALITY TRANSMISSIONS
                   </span>
                 </div>
               </a>
@@ -147,9 +147,9 @@ const Navigation = (props) => {
               <span className="navigation-mobile-contact-label">
                 DIRECT LINE
               </span>
-              <a href="tel:623300447">
+              <a href="tel:6232813331">
                 <div className="navigation-mobile-phone">
-                  <span>623-300-447</span>
+                  <span>(623) 281-3331</span>
                 </div>
               </a>
             </div>

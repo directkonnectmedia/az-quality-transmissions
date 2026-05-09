@@ -1,5 +1,5 @@
 // Optional: raster logo background removal. Point inPath/outPath at a PNG in /public
-// when you add a custom PHX Junk Removal logo file. Run: node scripts/transparent-logo.js
+// when you add a custom AZ Quality Transmissions logo file. Run: node scripts/transparent-logo.js
 // (Requires: npm i -D jimp)
 const path = require('path')
 const { Jimp } = require('jimp')
