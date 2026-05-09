@@ -2560,7 +2560,7 @@
 .quote-service-desc,
 .quote-timeline-desc {
   font-size: 0.82rem;
-  opacity: 0.85;
+  color: #000000;
 }
 .quote-timeline-tag {
   display: inline-block;
@@ -2608,7 +2608,6 @@
 }
 .quote-opt {
   color: #000000;
-  opacity: 0.72;
   font-weight: 500;
   letter-spacing: 0.05em;
   text-transform: none;
