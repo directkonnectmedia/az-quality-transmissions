@@ -156,9 +156,9 @@ const Home = (props) => {
               </div>
               <div className="expertise-card">
                 <div className="expertise-card-content">
-                  <h3 className="section-subtitle">2-YEAR UNLIMITED MILE WARRANTY</h3>
+                  <h3 className="section-subtitle">WARRANTY</h3>
                   <p className="section-content">
-                    Industry-leading warranty coverage—ask us how it applies to
+                    2-year unlimited mileage coverage—ask us how it applies to
                     your Transmission &amp; Auto Repair estimate.
                   </p>
                 </div>
