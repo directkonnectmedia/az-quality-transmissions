@@ -2368,7 +2368,7 @@
   position: relative;
   max-width: 880px;
   margin: 0 auto;
-  padding-top: clamp(1.85rem, 4vw, 2.65rem);
+  padding-top: 0;
   z-index: 0;
 }
 .snap-finance-note {
@@ -2393,7 +2393,7 @@
 .quote-wizard {
   --qc-red: #ff0000;
   --qc-red-deep: #cc0000;
-  background-color: #000000;
+  background-color: #0f0f0f;
   background-image: none;
   border-top: none;
   border-bottom: none;
@@ -2401,8 +2401,10 @@
 }
 .quote-wizard-container {
   background: #000000;
-  border: 2px solid var(--qc-red);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+  border: 3px solid var(--qc-red);
+  box-shadow:
+    0px 0px 60px 20px rgba(0, 0, 0, 0.9),
+    0px 0px 100px 40px rgba(255, 0, 0, 0.1);
   max-width: 880px;
   padding: var(--spacing-3xl);
   color: #ffffff;
@@ -3390,11 +3392,11 @@ video {
   /* QUOTE WIZARD */
   .quote-wizard {
     padding: 48px 16px;
-    background-color: #000000;
+    background-color: #0f0f0f;
     background-attachment: scroll;
   }
   .quote-wizard-shell {
-    padding-top: clamp(2.25rem, 8vw, 3.25rem);
+    padding-top: 0;
   }
   .snap-finance-note {
     max-width: min(100%, 340px);
@@ -3405,7 +3407,9 @@ video {
   }
   .quote-wizard-container {
     padding: 22px 18px;
-    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.28);
+    box-shadow:
+      0px 0px 60px 20px rgba(0, 0, 0, 0.9),
+      0px 0px 100px 40px rgba(255, 0, 0, 0.1);
   }
   .quote-wizard-header {
     margin-bottom: 22px;
