@@ -36,26 +36,30 @@ const MAP_EMBED_SRC =
   'https://maps.google.com/maps?q=5600+Grand+Ave,+Glendale,+AZ+85301&t=&z=14&ie=UTF8&iwloc=&output=embed'
 
 /** Bust intermediary caches/CDN staleness across deploys */
-const MEDIA_CACHE_TAG = 'azqt-media-v5'
+const MEDIA_CACHE_TAG = 'azqt-media-v6'
 
 const HERO_VIDEO_PRIMARY =
-  'https://cdn.pixabay.com/video/2023/10/24/186358-877708304_tiny.mp4'
-/**
- * Fallback when Pixabay stalls (CDN / policy). Reliable HTTPS MP4 —
- * sparks / industrial visuals; swap for a bundled /public/*.mp4 anytime.
- */
+  'https://cdn.pixabay.com/video/2020/05/25/40087-424424361_tiny.mp4'
+/** Secondary automotive clip if primary Pixabay stalls */
 const HERO_VIDEO_FALLBACK =
-  'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4'
+  'https://cdn.pixabay.com/video/2023/10/24/186358-877708304_tiny.mp4'
 
-const CORE_IMG_REPAIR = `https://source.unsplash.com/featured/?transmission,mechanic&cb=${MEDIA_CACHE_TAG}`
-const CORE_IMG_REBUILD = `https://source.unsplash.com/featured/?gears,engine&cb=${MEDIA_CACHE_TAG}`
-const CORE_IMG_MAINT = `https://source.unsplash.com/featured/?car-service,tools&cb=${MEDIA_CACHE_TAG}`
+const CORE_IMG_REPAIR =
+  'https://images.pexels.com/photos/190537/pexels-photo-190537.jpeg?auto=compress&cs=tinysrgb&w=1200'
+const CORE_IMG_REBUILD =
+  'https://images.pexels.com/photos/3642618/pexels-photo-3642618.jpeg?auto=compress&cs=tinysrgb&w=1200'
+const CORE_IMG_MAINT =
+  'https://images.pexels.com/photos/2244746/pexels-photo-2244746.jpeg?auto=compress&cs=tinysrgb&w=1200'
 
-const GALLERY_IMG_1 = `https://images.unsplash.com/photo-1590674899484-13da0d1b58f5?auto=format&fit=crop&w=800&cb=${MEDIA_CACHE_TAG}-g1`
-const GALLERY_IMG_2 = `https://images.unsplash.com/photo-1503664185672-9141f4093908?auto=format&fit=crop&w=800&cb=${MEDIA_CACHE_TAG}-g2`
-const GALLERY_IMG_3 = `https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=800&cb=${MEDIA_CACHE_TAG}-g3`
+const GALLERY_IMG_1 =
+  'https://images.pexels.com/photos/4489734/pexels-photo-4489734.jpeg?auto=compress&cs=tinysrgb&w=800'
+const GALLERY_IMG_2 =
+  'https://images.pexels.com/photos/3806249/pexels-photo-3806249.jpeg?auto=compress&cs=tinysrgb&w=800'
+const GALLERY_IMG_3 =
+  'https://images.pexels.com/photos/4489737/pexels-photo-4489737.jpeg?auto=compress&cs=tinysrgb&w=800'
 
-const HERO_POSTER = `https://images.unsplash.com/photo-1486006396193-c81ab8828e1e?auto=format&fit=crop&w=1200&cb=${MEDIA_CACHE_TAG}`
+const HERO_POSTER =
+  'https://images.pexels.com/photos/4489737/pexels-photo-4489737.jpeg?auto=compress&cs=tinysrgb&w=1200'
 
 const Home = (props) => {
   const [tIndex, setTIndex] = useState(0)
@@ -164,7 +168,7 @@ const Home = (props) => {
                   <img
                     key={`img-repair-${MEDIA_CACHE_TAG}`}
                     src={CORE_IMG_REPAIR}
-                    alt="Professional transmission repair bay"
+                    alt="Close-up of transmission and engine bay components"
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
                     decoding="async"
@@ -182,7 +186,7 @@ const Home = (props) => {
                   <img
                     key={`img-rebuild-${MEDIA_CACHE_TAG}`}
                     src={CORE_IMG_REBUILD}
-                    alt="Transmission rebuild and gear components"
+                    alt="Mechanic working on gears and bench rebuild work"
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
                     decoding="async"
@@ -200,7 +204,7 @@ const Home = (props) => {
                   <img
                     key={`img-maint-${MEDIA_CACHE_TAG}`}
                     src={CORE_IMG_MAINT}
-                    alt="Transmission fluid service and maintenance"
+                    alt="Transmission fluid check and diagnostic maintenance"
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
                     decoding="async"
@@ -276,7 +280,7 @@ const Home = (props) => {
             <div className="gallery-item" key={`gal-1-${MEDIA_CACHE_TAG}`}>
               <img
                 key={`gallery-img-1-${MEDIA_CACHE_TAG}`}
-                alt="Technician at workbench servicing transmission components"
+                alt="Automotive technician at a workbench"
                 src={GALLERY_IMG_1}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
@@ -286,7 +290,7 @@ const Home = (props) => {
             <div className="gallery-item" key={`gal-2-${MEDIA_CACHE_TAG}`}>
               <img
                 key={`gallery-img-2-${MEDIA_CACHE_TAG}`}
-                alt="Transmission gears and mechanical components"
+                alt="Detailed automotive transmission gears"
                 src={GALLERY_IMG_2}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
@@ -296,7 +300,7 @@ const Home = (props) => {
             <div className="gallery-item" key={`gal-3-${MEDIA_CACHE_TAG}`}>
               <img
                 key={`gallery-img-3-${MEDIA_CACHE_TAG}`}
-                alt="Close-up mechanical transmission detail"
+                alt="Professional automotive workshop and garage bay"
                 src={GALLERY_IMG_3}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
