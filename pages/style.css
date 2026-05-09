@@ -2365,54 +2365,38 @@
   background-color: #000000;
 }
 .quote-wizard-shell {
-  position: relative;
   width: 100%;
-  max-width: min(1180px, 100%);
+  max-width: 880px;
   margin: 0 auto;
-  padding-top: 0;
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: stretch;
-  justify-content: center;
-  gap: clamp(20px, 4vw, 48px);
-  z-index: 0;
 }
-.snap-finance-note {
-  position: relative;
-  flex: 0 1 clamp(160px, 22vw, 260px);
-  margin: 0;
-  padding: clamp(12px, 2vw, 20px) 0;
-  max-width: 280px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  align-self: center;
-  text-align: left;
-  line-height: 1.2;
-  font-family: var(--font-family-heading);
-  font-weight: 800;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-  font-size: 2rem;
-  color: #ffffff;
+.snap-finance-widget {
+  position: absolute;
+  right: 40px;
+  bottom: 40px;
+  z-index: 4;
   pointer-events: none;
-  hyphens: auto;
-  overflow-wrap: break-word;
 }
 
 .quote-wizard {
+  --snap-blue: #00a9e0;
+  --snap-green: #78be20;
   --qc-red: #ff0000;
   --qc-red-deep: #cc0000;
+  position: relative;
+  overflow: visible;
   background-color: #000000;
   background-image: none;
   border-top: none;
   border-bottom: none;
-  padding: clamp(40px, 7vw, 72px) clamp(20px, 4vw, 32px) clamp(48px, 8vw, 88px);
+  padding:
+    clamp(40px, 7vw, 72px) clamp(20px, 4vw, 32px)
+    clamp(160px, 22vw, 200px)
+    clamp(20px, 4vw, 32px);
 }
 .quote-wizard-container {
   position: relative;
-  flex: 1 1 880px;
-  min-width: 0;
+  width: 100%;
+  margin: 0 auto;
   max-width: 880px;
   background: #080808;
   border: 2.5px solid var(--qc-red);
@@ -2422,6 +2406,41 @@
     0 0 100px 40px rgba(0, 0, 0, 1);
   padding: var(--spacing-3xl);
   color: #ffffff;
+}
+.snap-finance-mark {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: fit-content;
+  margin-left: auto;
+  text-align: left;
+  gap: 0;
+  font-family:
+    ui-rounded,
+    system-ui,
+    "Segoe UI",
+    "Inter",
+    Roboto,
+    sans-serif;
+  line-height: 0.92;
+}
+.snap-finance-main {
+  font-size: clamp(1.625rem, 4.5vw, 2rem);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  text-transform: lowercase;
+  color: var(--snap-blue);
+}
+.snap-finance-bang {
+  color: inherit;
+}
+.snap-finance-sub {
+  margin-top: -0.04em;
+  font-size: clamp(0.9rem, 2.75vw, 1.0625rem);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: lowercase;
+  color: var(--snap-green);
 }
 .quote-wizard-header {
   margin-bottom: var(--spacing-3xl);
@@ -3141,19 +3160,7 @@ video {
     grid-template-columns: repeat(2, 1fr);
   }
   .quote-wizard-shell {
-    flex-direction: column;
-    flex-wrap: nowrap;
     max-width: 880px;
-    gap: clamp(16px, 4vw, 28px);
-  }
-  .snap-finance-note {
-    flex: 1 1 auto;
-    max-width: 100%;
-    width: 100%;
-    justify-content: center;
-    text-align: center;
-    font-size: clamp(1.35rem, 4vw, 2rem);
-    padding: 4px 8px 0;
   }
   .quote-wizard-container {
     padding: var(--spacing-2xl);
@@ -3423,18 +3430,12 @@ video {
 
   /* QUOTE WIZARD */
   .quote-wizard {
-    padding: 48px 16px;
-    background-color: #000000;
-    background-attachment: scroll;
+    padding: 48px 16px clamp(140px, 26vw, 180px);
   }
   .quote-wizard-shell {
-    flex-direction: column;
-    flex-wrap: nowrap;
-    gap: clamp(20px, 5vw, 32px);
     max-width: 880px;
   }
   .quote-wizard-container {
-    flex: 1 1 auto;
     max-width: 100%;
     width: 100%;
     padding: 22px 18px;
@@ -3443,15 +3444,15 @@ video {
       0 0 60px 20px rgba(255, 0, 0, 0.3),
       0 0 100px 40px rgba(0, 0, 0, 1);
   }
-  .snap-finance-note {
-    flex: 1 1 auto;
-    max-width: 100%;
-    width: 100%;
-    justify-content: center;
-    text-align: center;
-    align-self: center;
-    padding: 8px 8px 0;
-    font-size: clamp(1.35rem, 6vw, 2rem);
+  .snap-finance-widget {
+    right: 24px;
+    bottom: 24px;
+  }
+  .snap-finance-main {
+    font-size: clamp(1.375rem, 6vw, 1.875rem);
+  }
+  .snap-finance-sub {
+    font-size: clamp(0.8rem, 3.75vw, 1rem);
   }
   .quote-wizard-header {
     margin-bottom: 22px;

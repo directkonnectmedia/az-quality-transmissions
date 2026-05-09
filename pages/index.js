@@ -723,7 +723,18 @@ const Home = (props) => {
               </div>
             </form>
             </div>
-            <p className="snap-finance-note">Snap Finance Available</p>
+          </div>
+          <div
+            className="snap-finance-widget"
+            role="img"
+            aria-label="Snap Finance available"
+          >
+            <span className="snap-finance-mark">
+              <span className="snap-finance-main">
+                snap<span className="snap-finance-bang">!</span>
+              </span>
+              <span className="snap-finance-sub">finance</span>
+            </span>
           </div>
         </section>
         <section id="coverage" className="location-section">
