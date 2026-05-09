@@ -2371,8 +2371,8 @@
 }
 .snap-finance-widget {
   position: absolute;
-  right: 40px;
-  bottom: 40px;
+  right: clamp(72px, 12vw, 120px);
+  bottom: clamp(72px, 12vw, 120px);
   z-index: 4;
   pointer-events: none;
 }
@@ -2389,9 +2389,9 @@
   border-top: none;
   border-bottom: none;
   padding:
-    clamp(40px, 7vw, 72px) clamp(20px, 4vw, 32px)
-    clamp(160px, 22vw, 200px)
-    clamp(20px, 4vw, 32px);
+    clamp(40px, 7vw, 72px) clamp(20px, 4vw, 36px)
+    clamp(220px, 28vw, 280px)
+    clamp(20px, 4vw, 36px);
 }
 .quote-wizard-container {
   position: relative;
@@ -2415,6 +2415,13 @@
   margin-left: auto;
   text-align: left;
   gap: 0;
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  filter: drop-shadow(0 2px 16px rgba(0, 0, 0, 0.75));
   font-family:
     ui-rounded,
     system-ui,
@@ -2425,7 +2432,7 @@
   line-height: 0.92;
 }
 .snap-finance-main {
-  font-size: clamp(1.625rem, 4.5vw, 2rem);
+  font-size: clamp(2.5rem, 3.75vw, 3rem);
   font-weight: 900;
   letter-spacing: -0.02em;
   text-transform: lowercase;
@@ -2436,9 +2443,9 @@
 }
 .snap-finance-sub {
   margin-top: -0.04em;
-  font-size: clamp(0.9rem, 2.75vw, 1.0625rem);
-  font-weight: 700;
-  letter-spacing: 0.06em;
+  font-size: clamp(1.125rem, 2.15vw, 1.4375rem);
+  font-weight: 800;
+  letter-spacing: 0.055em;
   text-transform: lowercase;
   color: var(--snap-green);
 }
@@ -3430,7 +3437,7 @@ video {
 
   /* QUOTE WIZARD */
   .quote-wizard {
-    padding: 48px 16px clamp(140px, 26vw, 180px);
+    padding: 48px 16px clamp(180px, 32vw, 240px);
   }
   .quote-wizard-shell {
     max-width: 880px;
@@ -3445,14 +3452,14 @@ video {
       0 0 100px 40px rgba(0, 0, 0, 1);
   }
   .snap-finance-widget {
-    right: 24px;
-    bottom: 24px;
+    right: clamp(40px, 10vw, 72px);
+    bottom: clamp(40px, 10vw, 72px);
   }
   .snap-finance-main {
-    font-size: clamp(1.375rem, 6vw, 1.875rem);
+    font-size: clamp(2.25rem, 7.5vw, 2.75rem);
   }
   .snap-finance-sub {
-    font-size: clamp(0.8rem, 3.75vw, 1rem);
+    font-size: clamp(1rem, 3.5vw, 1.25rem);
   }
   .quote-wizard-header {
     margin-bottom: 22px;
