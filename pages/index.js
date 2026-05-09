@@ -81,13 +81,17 @@ const Home = (props) => {
           <div className="hero-concrete-bg" aria-hidden="true">
             <video
               src="https://cdn.pixabay.com/video/2023/10/24/186358-877708304_tiny.mp4"
+              poster="https://images.unsplash.com/photo-1486006396193-c81ab8828e1e?auto=format&fit=crop&w=1200"
               loop={true}
               muted={true}
               autoPlay={true}
               playsInline={true}
-              preload="metadata"
+              preload="auto"
+              controls={false}
               className="hero-concrete-video"
-            />
+            >
+              Your browser does not support HTML5 video.
+            </video>
             <div className="hero-concrete-overlay"></div>
           </div>
           <div className="hero-concrete-content">
@@ -129,9 +133,10 @@ const Home = (props) => {
               <article className="core-service-card">
                 <div className="core-service-media">
                   <img
-                    src="https://images.unsplash.com/photo-1504222490345-c075b6008014?auto=format&fit=crop&q=80&w=800"
+                    src="https://images.unsplash.com/photo-1504222490345-c075b6008014?auto=format&fit=crop&w=1200"
                     alt="Professional transmission repair bay"
                     loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
                   />
                 </div>
                 <div className="core-service-body">
@@ -144,9 +149,10 @@ const Home = (props) => {
               <article className="core-service-card">
                 <div className="core-service-media">
                   <img
-                    src="https://images.unsplash.com/photo-1503664185672-9141f4093908?auto=format&fit=crop&q=80&w=800"
+                    src="https://images.unsplash.com/photo-1503664185672-9141f4093908?auto=format&fit=crop&w=1200"
                     alt="Transmission rebuild and gear components"
                     loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
                   />
                 </div>
                 <div className="core-service-body">
@@ -159,9 +165,10 @@ const Home = (props) => {
               <article className="core-service-card">
                 <div className="core-service-media">
                   <img
-                    src="https://images.unsplash.com/photo-1632733711679-539da6952c17?auto=format&fit=crop&q=80&w=800"
+                    src="https://images.unsplash.com/photo-1632733711679-539da6952c17?auto=format&fit=crop&w=1200"
                     alt="Transmission fluid service and maintenance"
                     loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
                   />
                 </div>
                 <div className="core-service-body">
@@ -233,16 +240,26 @@ const Home = (props) => {
           <div className="gallery-scroller">
             <div className="gallery-item">
               <img
-                alt="Transmission gears and bench work"
-                src="https://images.unsplash.com/photo-1503664185672-9141f4093908?auto=format&fit=crop&q=85&w=1600"
+                alt="Technician at workbench servicing transmission components"
+                src="https://images.unsplash.com/photo-1590674899484-13da0d1b58f5?auto=format&fit=crop&w=800"
                 loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
               />
             </div>
             <div className="gallery-item">
               <img
-                alt="Technician at workbench servicing transmission components"
-                src="https://images.unsplash.com/photo-1590674899484-13da0d1b58f5?auto=format&fit=crop&q=85&w=1600"
+                alt="Transmission gears and mechanical components"
+                src="https://images.unsplash.com/photo-1503664185672-9141f4093908?auto=format&fit=crop&w=800"
                 loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
+            <div className="gallery-item">
+              <img
+                alt="Close-up mechanical transmission detail"
+                src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=800"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
               />
             </div>
           </div>
