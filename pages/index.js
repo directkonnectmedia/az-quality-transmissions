@@ -36,16 +36,7 @@ const Home = (props) => {
         </Head>
         <Navigation></Navigation>
         <section id="home" className="hero-concrete">
-          <div className="hero-concrete-bg">
-            <video
-              src="https://assets.mixkit.co/videos/49210/49210-720.mp4"
-              loop={true}
-              muted={true}
-              poster="https://assets.mixkit.co/videos/49210/49210-thumb-720-3.jpg"
-              autoPlay={true}
-              playsInline={true}
-              className="hero-concrete-video"
-            ></video>
+          <div className="hero-concrete-bg" aria-hidden="true">
             <div className="hero-concrete-overlay"></div>
           </div>
           <div className="hero-concrete-content">
