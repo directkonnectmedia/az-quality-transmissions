@@ -40,14 +40,14 @@
   --font-family-body: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --font-weight-body: 400;
   --line-height-body: 1.6;
-  --color-accent-dark: #ea580c;
+  --color-accent-dark: #b91c1c;
   --color-border-dark: color-mix(in oklab, var(--color-surface-dark) 85%, white);
   --color-scrim-light: color-mix(in oklab, #000000 70%, transparent);
   --content-max-width: 80rem;
   --border-radius-card: var(--border-radius-md);
   --border-radius-full: 9999px;
   --border-radius-none: 0px;
-  --color-accent-light: #f97316;
+  --color-accent-light: #dc2626;
   --color-border-light: color-mix(in oklab, var(--color-surface-light) 85%, black);
   --color-neutral-dark: #9ca3af;
   --color-on-secondary: var(--color-on-secondary-light);
@@ -68,7 +68,7 @@
   --line-height-heading: 1.2;
   --color-backplate-dark: color-mix(in oklab, #ffffff 60%, transparent);
   --color-on-accent-dark: #ffffff;
-  --color-secondary-dark: #ff9a35;
+  --color-secondary-dark: #ef4444;
   --dl-layout-size-large: 144px;
   --dl-layout-size-small: 48px;
   --dl-layout-space-unit: 16px;
@@ -77,7 +77,7 @@
   --color-on-accent-light: #ffffff;
   --color-on-primary-dark: #ffffff;
   --color-on-surface-dark: #f3f3f3;
-  --color-secondary-light: #f97316;
+  --color-secondary-light: #dc2626;
   --dl-layout-size-medium: 96px;
   --dl-layout-size-xlarge: 192px;
   --dl-layout-size-xsmall: 16px;
@@ -86,14 +86,14 @@
   --color-on-surface-light: #0f1113;
   --color-surface-elevated: var(--color-surface-elevated-light);
   --dl-color-theme-accent1: #FFFFFF;
-  --dl-color-theme-accent2: #FED7AA;
+  --dl-color-theme-accent2: #FECACA;
   --dl-layout-radius-round: 50%;
   --dl-layout-size-xxlarge: 288px;
   --letter-spacing-heading: 0.15em;
   --text-transform-heading: uppercase;
   --color-on-secondary-dark: #ffffff;
-  --dl-color-theme-primary1: #BF4408;
-  --dl-color-theme-primary2: #E65103;
+  --dl-color-theme-primary1: #991B1B;
+  --dl-color-theme-primary2: #b91c1c;
   --dl-layout-size-maxwidth: 1400px;
   --color-on-secondary-light: #ffffff;
   --dl-layout-radius-radius2: 2px;
@@ -1253,7 +1253,7 @@
  
 .hero-concrete-main-title {
   font-size: clamp(3rem, 10vw, 8rem);
-  text-shadow: 4px 4px 0px var(--hero-title-shadow, #f97316);
+  text-shadow: 4px 4px 0px var(--hero-title-shadow, #dc2626);
   margin-bottom: var(--spacing-md);
 }
  
@@ -1911,18 +1911,18 @@
 
 /* ==========================================================================
    AZ QUALITY TRANSMISSIONS — REVAMP OVERRIDES
-   Dark theme: black, white, logo orange. Industrial/rugged.
+   Dark theme: black, white, logo red. Industrial/rugged.
    ========================================================================== */
 
 :root {
-  --qc-red: #f97316;
-  --qc-red-deep: #c2410c;
+  --qc-red: #dc2626;
+  --qc-red-deep: #b91c1c;
   --qc-black: #000000;
   --qc-charcoal: #0f1113;
   --qc-slate: #18181b;
   --qc-text: #ffffff;
   --qc-text-muted: #ffffff;
-  --hero-title-shadow: #f97316;
+  --hero-title-shadow: #dc2626;
   --qc-gallery-bg: #f5f5f5;
 }
 
@@ -1937,9 +1937,9 @@
 }
 .navigation-brand-logo {
   height: auto;
-  max-height: 72px;
+  max-height: 52px;
   width: auto;
-  max-width: 160px;
+  max-width: min(280px, 54vw);
   display: block;
   object-fit: contain;
   flex-shrink: 0;
@@ -1953,9 +1953,9 @@
 }
 .footer-brand-logo {
   height: auto;
-  max-height: 160px;
+  max-height: 100px;
   width: auto;
-  max-width: min(280px, 100%);
+  max-width: min(360px, 100%);
   display: block;
   object-fit: contain;
   flex-shrink: 0;
@@ -2047,9 +2047,10 @@
   flex-wrap: wrap;
 }
 .hero-concrete-logo {
-  height: clamp(200px, 36vw, 380px);
   width: auto;
-  max-width: min(420px, 92vw);
+  max-width: min(820px, 96vw);
+  height: auto;
+  max-height: clamp(120px, 20vw, 240px);
   display: block;
   object-fit: contain;
   background: transparent;
@@ -2888,8 +2889,8 @@ video {
     gap: 12px;
   }
   .navigation-brand-logo {
-    max-height: 58px;
-    max-width: 130px;
+    max-height: 48px;
+    max-width: min(260px, 72vw);
   }
   .navigation-logo-text {
     font-size: 0.78rem;
@@ -3000,8 +3001,8 @@ video {
   }
   .hero-concrete-logo {
     height: auto;
-    max-height: 260px;
-    max-width: min(360px, 88vw);
+    max-height: 200px;
+    max-width: min(94vw, 680px);
   }
   .hero-concrete-main-title {
     font-size: clamp(1.6rem, 8vw, 2.4rem) !important;
@@ -3287,16 +3288,16 @@ video {
     max-width: 50vw;
   }
   .navigation-brand-logo {
-    max-height: 52px;
-    max-width: 115px;
+    max-height: 44px;
+    max-width: min(220px, 68vw);
   }
   .hero-concrete-main-title {
     font-size: 1.35rem !important;
   }
   .hero-concrete-logo {
     height: auto;
-    max-height: 220px;
-    max-width: min(300px, 90vw);
+    max-height: 150px;
+    max-width: min(94vw, 520px);
   }
   .hero-concrete-sub {
     font-size: 0.78rem;

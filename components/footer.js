@@ -13,11 +13,11 @@ const Footer = (props) => {
               <div className="footer-brand footer-column">
                 <div className="footer-brand-row">
                   <img
-                    src="/phx-logo.png"
+                    src="/az-quality-logo.png"
                     alt="AZ Quality Transmissions logo"
                     className="footer-brand-logo"
                   />
-                  <h2 className="footer-logo section-title">
+                  <h2 className="footer-logo section-title" aria-hidden="true">
                     AZ QUALITY TRANSMISSIONS
                   </h2>
                 </div>

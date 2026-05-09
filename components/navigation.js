@@ -14,11 +14,11 @@ const Navigation = (props) => {
               <a className="navigation-brand-link">
                 <div className="navigation-brand">
                   <img
-                    src="/phx-logo.png"
+                    src="/az-quality-logo.png"
                     alt="AZ Quality Transmissions logo"
                     className="navigation-brand-logo"
                   />
-                  <span className="navigation-logo-text">
+                  <span className="navigation-logo-text" aria-hidden="true">
                     AZ QUALITY TRANSMISSIONS
                   </span>
                 </div>
@@ -83,11 +83,11 @@ const Navigation = (props) => {
               <a className="navigation-brand-link">
                 <div className="navigation-brand">
                   <img
-                    src="/phx-logo.png"
+                    src="/az-quality-logo.png"
                     alt="AZ Quality Transmissions logo"
                     className="navigation-brand-logo"
                   />
-                  <span className="navigation-logo-text">
+                  <span className="navigation-logo-text" aria-hidden="true">
                     AZ QUALITY TRANSMISSIONS
                   </span>
                 </div>

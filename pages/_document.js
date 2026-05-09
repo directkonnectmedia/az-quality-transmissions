@@ -11,10 +11,10 @@ class CustomDocument extends Document {
           ></meta>
           <link
             rel="icon"
-            href="/phx-logo.png"
+            href="/az-quality-logo.png"
             type="image/png"
           ></link>
-          <meta name="theme-color" content="#f97316"></meta>
+          <meta name="theme-color" content="#dc2626"></meta>
           <meta name="format-detection" content="telephone=no"></meta>
           <meta property="twitter:card" content="summary_large_image"></meta>
           <style

@@ -51,7 +51,7 @@ const Home = (props) => {
           <div className="hero-concrete-content">
             <div className="hero-concrete-brand">
               <img
-                src="/phx-logo.png"
+                src="/az-quality-logo.png"
                 alt="AZ Quality Transmissions logo"
                 className="hero-concrete-logo"
               />
