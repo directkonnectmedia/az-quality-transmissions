@@ -388,7 +388,6 @@ const Home = (props) => {
         </section>
         <section id="contact" className="quote-wizard">
           <div className="quote-wizard-shell">
-            <p className="snap-finance-note">Snap Finance Available</p>
             <div className="quote-wizard-container">
             <div className="quote-wizard-header">
               <h2 className="section-title">GET A QUOTE</h2>
@@ -724,6 +723,7 @@ const Home = (props) => {
               </div>
             </form>
             </div>
+            <p className="snap-finance-note">Snap Finance Available</p>
           </div>
         </section>
         <section id="coverage" className="location-section">
