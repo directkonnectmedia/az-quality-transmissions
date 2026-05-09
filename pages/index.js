@@ -732,7 +732,9 @@ const Home = (props) => {
           >
             <div className="snap-finance-mark">
               <div className="snap-finance-line snap-finance-line-brand">
-                <span className="snap-finance-snap">Snap</span>
+                <span className="snap-finance-snap">
+                  Snap<span className="snap-finance-bang">!</span>
+                </span>
                 <span className="snap-finance-finance-word">Finance</span>
               </div>
               <div className="snap-finance-line snap-finance-line-available">

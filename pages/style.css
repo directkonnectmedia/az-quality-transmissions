@@ -2455,11 +2455,11 @@
 .snap-finance-line {
   text-align: center;
   letter-spacing: -0.025em;
-  font-weight: 900;
+  font-weight: 800;
   line-height: 1;
 }
 .snap-finance-line-brand {
-  font-size: clamp(5rem, 11vw, 6rem);
+  font-size: clamp(3.75rem, 8.25vw, 4.5rem);
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
@@ -2470,12 +2470,15 @@
 .snap-finance-snap {
   color: var(--snap-blue);
 }
+.snap-finance-bang {
+  color: inherit;
+}
 .snap-finance-finance-word {
   color: var(--snap-green);
 }
 .snap-finance-line-available {
-  font-size: clamp(2.875rem, 6.5vw, 3.875rem);
-  font-weight: 900;
+  font-size: clamp(2.15625rem, 4.875vw, 2.90625rem);
+  font-weight: 800;
   color: var(--snap-blue);
   letter-spacing: 0.06em;
   text-transform: none;
@@ -3211,10 +3214,10 @@ video {
     margin-top: 0;
   }
   .snap-finance-line-brand {
-    font-size: clamp(3.125rem, 12.5vw, 4.875rem);
+    font-size: clamp(2.345rem, 9.375vw, 3.655rem);
   }
   .snap-finance-line-available {
-    font-size: clamp(1.75rem, 7vw, 2.75rem);
+    font-size: clamp(1.315rem, 5.25vw, 2.065rem);
   }
 }
 
@@ -3512,10 +3515,10 @@ video {
       0 0 100px 40px rgba(0, 0, 0, 1);
   }
   .snap-finance-line-brand {
-    font-size: clamp(2.75rem, 11vw, 3.625rem);
+    font-size: clamp(2.065rem, 8.25vw, 2.72rem);
   }
   .snap-finance-line-available {
-    font-size: clamp(1.5rem, 6vw, 2.125rem);
+    font-size: clamp(1.125rem, 4.5vw, 1.595rem);
   }
   .quote-wizard-header {
     margin-bottom: 22px;
