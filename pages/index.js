@@ -387,8 +387,9 @@ const Home = (props) => {
           </div>
         </section>
         <section id="contact" className="quote-wizard">
-          <div className="quote-wizard-shell">
-            <div className="quote-wizard-container">
+          <div className="quote-wizard-layout">
+            <div className="quote-wizard-shell">
+              <div className="quote-wizard-container">
             <div className="quote-wizard-header">
               <h2 className="section-title">GET A QUOTE</h2>
               <p className="section-content">
@@ -729,12 +730,16 @@ const Home = (props) => {
             role="img"
             aria-label="Snap Finance available"
           >
-            <span className="snap-finance-mark">
-              <span className="snap-finance-main">
-                snap<span className="snap-finance-bang">!</span>
-              </span>
-              <span className="snap-finance-sub">finance</span>
-            </span>
+            <div className="snap-finance-mark">
+              <div className="snap-finance-line snap-finance-line-brand">
+                <span className="snap-finance-snap">Snap</span>
+                <span className="snap-finance-finance-word">Finance</span>
+              </div>
+              <div className="snap-finance-line snap-finance-line-available">
+                Available
+              </div>
+            </div>
+          </div>
           </div>
         </section>
         <section id="coverage" className="location-section">

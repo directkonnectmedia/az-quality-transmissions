@@ -2364,17 +2364,39 @@
   padding: 24px 20px 24px;
   background-color: #000000;
 }
+.quote-wizard-layout {
+  display: grid;
+  width: 100%;
+  max-width: min(1480px, 100%);
+  margin: 0 auto;
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, min(880px, 100%))
+    minmax(0, 1fr);
+  column-gap: clamp(56px, 8vw, 96px);
+  align-items: start;
+  justify-items: stretch;
+}
 .quote-wizard-shell {
+  grid-column: 2;
+  justify-self: center;
   width: 100%;
   max-width: 880px;
-  margin: 0 auto;
+  margin: 0;
 }
 .snap-finance-widget {
-  position: absolute;
-  right: clamp(72px, 12vw, 120px);
-  bottom: clamp(72px, 12vw, 120px);
+  grid-column: 3;
+  position: relative;
+  justify-self: end;
+  align-self: start;
+  width: fit-content;
+  max-width: min(520px, 100%);
+  min-width: 0;
   z-index: 4;
   pointer-events: none;
+  padding-right: clamp(12px, 2vw, 28px);
+  padding-left: clamp(8px, 1.5vw, 18px);
+  margin-top: clamp(4px, 1vw, 12px);
 }
 
 .quote-wizard {
@@ -2390,7 +2412,7 @@
   border-bottom: none;
   padding:
     clamp(40px, 7vw, 72px) clamp(20px, 4vw, 36px)
-    clamp(220px, 28vw, 280px)
+    clamp(48px, 8vw, 88px)
     clamp(20px, 4vw, 36px);
 }
 .quote-wizard-container {
@@ -2410,18 +2432,16 @@
 .snap-finance-mark {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: flex-start;
   width: fit-content;
-  margin-left: auto;
-  text-align: left;
-  gap: 0;
+  margin: 0 auto;
+  gap: clamp(0.06em, 1vw, 0.14em);
   padding: 0;
-  margin-top: 0;
-  margin-bottom: 0;
   background: transparent;
   border: none;
   box-shadow: none;
-  filter: drop-shadow(0 2px 16px rgba(0, 0, 0, 0.75));
+  filter: drop-shadow(0 3px 22px rgba(0, 0, 0, 0.88));
   font-family:
     ui-rounded,
     system-ui,
@@ -2429,25 +2449,36 @@
     "Inter",
     Roboto,
     sans-serif;
-  line-height: 0.92;
+  line-height: 1;
+  text-transform: none;
 }
-.snap-finance-main {
-  font-size: clamp(2.5rem, 3.75vw, 3rem);
+.snap-finance-line {
+  text-align: center;
+  letter-spacing: -0.025em;
   font-weight: 900;
-  letter-spacing: -0.02em;
-  text-transform: lowercase;
+  line-height: 1;
+}
+.snap-finance-line-brand {
+  font-size: clamp(5rem, 11vw, 6rem);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: center;
+  column-gap: 0.1em;
+  row-gap: 0;
+}
+.snap-finance-snap {
   color: var(--snap-blue);
 }
-.snap-finance-bang {
-  color: inherit;
-}
-.snap-finance-sub {
-  margin-top: -0.04em;
-  font-size: clamp(1.125rem, 2.15vw, 1.4375rem);
-  font-weight: 800;
-  letter-spacing: 0.055em;
-  text-transform: lowercase;
+.snap-finance-finance-word {
   color: var(--snap-green);
+}
+.snap-finance-line-available {
+  font-size: clamp(2.875rem, 6.5vw, 3.875rem);
+  font-weight: 900;
+  color: var(--snap-blue);
+  letter-spacing: 0.06em;
+  text-transform: none;
 }
 .quote-wizard-header {
   margin-bottom: var(--spacing-3xl);
@@ -3158,6 +3189,35 @@ video {
   max-width: 100%;
   height: auto;
 }
+
+/* ---------- QUOTE: stack Snap under wizard ≤1180px ---------- */
+@media (max-width: 1180px) {
+  .quote-wizard-layout {
+    grid-template-columns: 1fr;
+    row-gap: clamp(28px, 6vw, 52px);
+  }
+  .quote-wizard-shell {
+    grid-column: 1;
+  }
+  .snap-finance-widget {
+    grid-column: 1;
+    justify-self: center;
+    max-width: min(620px, 92vw);
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 0;
+  }
+  .snap-finance-line-brand {
+    font-size: clamp(3.125rem, 12.5vw, 4.875rem);
+  }
+  .snap-finance-line-available {
+    font-size: clamp(1.75rem, 7vw, 2.75rem);
+  }
+}
+
 /* ---------- TABLET (≤ 991px) ---------- */
 @media (max-width: 991px) {
   .testimonials-grid {
@@ -3437,7 +3497,7 @@ video {
 
   /* QUOTE WIZARD */
   .quote-wizard {
-    padding: 48px 16px clamp(180px, 32vw, 240px);
+    padding: 48px 16px clamp(52px, 11vw, 72px);
   }
   .quote-wizard-shell {
     max-width: 880px;
@@ -3451,15 +3511,11 @@ video {
       0 0 60px 20px rgba(255, 0, 0, 0.3),
       0 0 100px 40px rgba(0, 0, 0, 1);
   }
-  .snap-finance-widget {
-    right: clamp(40px, 10vw, 72px);
-    bottom: clamp(40px, 10vw, 72px);
+  .snap-finance-line-brand {
+    font-size: clamp(2.75rem, 11vw, 3.625rem);
   }
-  .snap-finance-main {
-    font-size: clamp(2.25rem, 7.5vw, 2.75rem);
-  }
-  .snap-finance-sub {
-    font-size: clamp(1rem, 3.5vw, 1.25rem);
+  .snap-finance-line-available {
+    font-size: clamp(1.5rem, 6vw, 2.125rem);
   }
   .quote-wizard-header {
     margin-bottom: 22px;
