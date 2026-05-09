@@ -1,13 +1,55 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Head from 'next/head'
 
 import Script from 'dangerous-html/react'
-import { useTranslations } from 'next-intl'
-
 import Navigation from '../components/navigation'
 import Footer from '../components/footer'
 
+const TESTIMONIALS = [
+  {
+    quote:
+      'AZ Quality Transmissions rebuilt the transmission on our delivery vans ahead of schedule. Clear pricing and the 2-year warranty matters when you run a fleet in the Valley.',
+    author: 'MARK R.',
+    role: 'Fleet Manager',
+  },
+  {
+    quote:
+      'My SUV was slipping between gears—they ran complimentary diagnostics, explained exactly what failed, and the rebuild has been flawless through summer heat.',
+    author: 'SARAH L.',
+    role: 'Homeowner, Scottsdale',
+  },
+  {
+    quote:
+      'Professional from diagnosis to pickup. Financing made a major rebuild manageable and the team communicated every milestone—our family car feels brand new again.',
+    author: 'DAVID K.',
+    role: 'Peoria Family',
+  },
+  {
+    quote:
+      'We route every Phoenix-area rollover and warranty concern to AZ Quality. Honest timelines, towing help on big jobs, and technicians who actually specialize in transmissions.',
+    author: 'JASON M.',
+    role: 'Dealership Liaison',
+  },
+]
+
+const MAP_EMBED_SRC =
+  'https://maps.google.com/maps?q=5600+Grand+Ave,+Glendale,+AZ+85301&t=&z=14&ie=UTF8&iwloc=&output=embed'
+
 const Home = (props) => {
+  const [tIndex, setTIndex] = useState(0)
+  useEffect(() => {
+    const id = window.setInterval(
+      () => setTIndex((i) => (i + 1) % TESTIMONIALS.length),
+      8000,
+    )
+    return () => window.clearInterval(id)
+  }, [])
+  const goSlide = (dir) =>
+    setTIndex((i) => {
+      const n = TESTIMONIALS.length
+      return (i + dir + n) % n
+    })
+
   return (
     <>
       <div className="home-container1">
@@ -37,6 +79,15 @@ const Home = (props) => {
         <Navigation></Navigation>
         <section id="home" className="hero-concrete">
           <div className="hero-concrete-bg" aria-hidden="true">
+            <video
+              src="https://cdn.pixabay.com/video/2023/10/24/186358-877708304_tiny.mp4"
+              loop={true}
+              muted={true}
+              autoPlay={true}
+              playsInline={true}
+              preload="metadata"
+              className="hero-concrete-video"
+            />
             <div className="hero-concrete-overlay"></div>
           </div>
           <div className="hero-concrete-content">
@@ -69,39 +120,57 @@ const Home = (props) => {
             </div>
           </div>
         </section>
-        <section id="services" className="expertise-grid expertise-how-it-works">
-          <div className="expertise-container">
-            <h2 className="expertise-heading section-title">HOW IT WORKS</h2>
-            <div className="expertise-layout">
-              <div className="expertise-card">
-                <div className="expertise-card-content">
-                  <h3 className="section-subtitle">01. DIAGNOSTICS &amp; ESTIMATE</h3>
+        <section id="services" className="core-services-section">
+          <div className="core-services-inner">
+            <h2 className="core-services-heading section-title">
+              TRANSMISSION SERVICES
+            </h2>
+            <div className="core-services-grid">
+              <article className="core-service-card">
+                <div className="core-service-media">
+                  <img
+                    src="https://images.unsplash.com/photo-1504222490345-c075b6008014?auto=format&fit=crop&q=80&w=800"
+                    alt="Professional transmission repair bay"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="core-service-body">
+                  <h3 className="section-subtitle">TRANSMISSION REPAIR</h3>
                   <p className="section-content">
-                    Complimentary transmission checks plus computer diagnostics
-                    where needed—we explain findings and outline options before any
-                    work begins.
+                    Comprehensive repair services for all makes.
                   </p>
                 </div>
-              </div>
-              <div className="expertise-card">
-                <div className="expertise-card-content">
-                  <h3 className="section-subtitle">02. AUTHORIZED REPAIR OR REBUILD</h3>
+              </article>
+              <article className="core-service-card">
+                <div className="core-service-media">
+                  <img
+                    src="https://images.unsplash.com/photo-1503664185672-9141f4093908?auto=format&fit=crop&q=80&w=800"
+                    alt="Transmission rebuild and gear components"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="core-service-body">
+                  <h3 className="section-subtitle">TRANSMISSION REBUILD</h3>
                   <p className="section-content">
-                    After you approve the plan, specialists rebuild or repair with
-                    quality parts and disciplined procedures—focused on longevity.
+                    Full rebuilds with high-quality parts.
                   </p>
                 </div>
-              </div>
-              <div className="expertise-card">
-                <div className="expertise-card-content">
-                  <h3 className="section-subtitle">03. ROAD-TESTED QUALITY</h3>
+              </article>
+              <article className="core-service-card">
+                <div className="core-service-media">
+                  <img
+                    src="https://images.unsplash.com/photo-1632733711679-539da6952c17?auto=format&fit=crop&q=80&w=800"
+                    alt="Transmission fluid service and maintenance"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="core-service-body">
+                  <h3 className="section-subtitle">TRANSMISSION MAINTENANCE</h3>
                   <p className="section-content">
-                    Every vehicle is road-tested, results reviewed with you, and
-                    backed by our 2-year unlimited mileage warranty where
-                    applicable.
+                    Flushes and preventative checks.
                   </p>
                 </div>
-              </div>
+              </article>
             </div>
           </div>
         </section>
@@ -164,98 +233,99 @@ const Home = (props) => {
           <div className="gallery-scroller">
             <div className="gallery-item">
               <img
-                alt="Transmission &amp; Auto Repair shop workspace"
-                src="https://images.pexels.com/photos/37121405/pexels-photo-37121405.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1500"
+                alt="Transmission gears and bench work"
+                src="https://images.unsplash.com/photo-1503664185672-9141f4093908?auto=format&fit=crop&q=85&w=1600"
                 loading="lazy"
               />
             </div>
             <div className="gallery-item">
               <img
-                alt="Transmission rebuild and repair service bay"
-                src="https://images.pexels.com/photos/37121400/pexels-photo-37121400.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1500"
-                loading="lazy"
-              />
-            </div>
-            <div className="gallery-item">
-              <img
-                alt="Diagnostic and fluid service for transmissions"
-                src="https://images.pexels.com/photos/37121406/pexels-photo-37121406.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1500"
-                loading="lazy"
-              />
-            </div>
-            <div className="gallery-item">
-              <img
-                alt="Heavy-duty Transmission &amp; Auto Repair readiness"
-                src="https://images.pexels.com/photos/2469/building-construction-building-site-constructing.jpg?auto=compress&amp;cs=tinysrgb&amp;w=1500"
+                alt="Technician at workbench servicing transmission components"
+                src="https://images.unsplash.com/photo-1590674899484-13da0d1b58f5?auto=format&fit=crop&q=85&w=1600"
                 loading="lazy"
               />
             </div>
           </div>
         </section>
-        <section className="testimonials-section">
+        <section className="testimonials-section" aria-labelledby="reviews-heading">
           <div className="testimonials-container">
             <div className="testimonials-header">
               <span className="testimonials-eyebrow">CLIENT VOICES</span>
-              <h2 className="testimonials-heading section-title">
-                CLIENT REVIEWS
+              <h2 id="reviews-heading" className="testimonials-heading section-title">
+                CUSTOMER REVIEWS
               </h2>
               <p className="testimonials-subtitle">
                 Trusted transmission &amp; auto repair specialists for Arizona drivers.
               </p>
             </div>
-            <div className="testimonials-grid">
-              <figure className="testimonial-card">
-                <span className="testimonial-quote-mark">&ldquo;</span>
-                <blockquote className="testimonial-quote">
-                  AZ Quality Transmissions rebuilt the transmission on our
-                  delivery vans ahead of schedule. Clear pricing and the 2-year
-                  warranty matters when you run a fleet in the Valley.
-                </blockquote>
-                <figcaption className="testimonial-meta">
-                  <span className="testimonial-author">MARK R.</span>
-                  <span className="testimonial-role">Fleet Manager</span>
-                </figcaption>
-              </figure>
-              <figure className="testimonial-card">
-                <span className="testimonial-quote-mark">&ldquo;</span>
-                <blockquote className="testimonial-quote">
-                  My SUV was slipping between gears—they ran complimentary
-                  diagnostics, explained exactly what failed, and the rebuild has
-                  been flawless through summer heat.
-                </blockquote>
-                <figcaption className="testimonial-meta">
-                  <span className="testimonial-author">SARAH L.</span>
-                  <span className="testimonial-role">Homeowner, Scottsdale</span>
-                </figcaption>
-              </figure>
-              <figure className="testimonial-card">
-                <span className="testimonial-quote-mark">&ldquo;</span>
-                <blockquote className="testimonial-quote">
-                  Professional from diagnosis to pickup. Financing made a major
-                  rebuild manageable and the team communicated every milestone—our
-                  family car feels brand new again.
-                </blockquote>
-                <figcaption className="testimonial-meta">
-                  <span className="testimonial-author">DAVID K.</span>
-                  <span className="testimonial-role">Peoria Family</span>
-                </figcaption>
-              </figure>
-              <figure className="testimonial-card">
-                <span className="testimonial-quote-mark">&ldquo;</span>
-                <blockquote className="testimonial-quote">
-                  We route every Phoenix-area rollover and warranty concern to AZ
-                  Quality. Honest timelines, towing help on big jobs, and
-                  technicians who actually specialize in transmissions.
-                </blockquote>
-                <figcaption className="testimonial-meta">
-                  <span className="testimonial-author">JASON M.</span>
-                  <span className="testimonial-role">Dealership Liaison</span>
-                </figcaption>
-              </figure>
+            <div
+              className="testimonials-carousel"
+              aria-roledescription="carousel"
+              aria-label="Customer reviews"
+            >
+              <div className="carousel-viewport">
+                <div
+                  className="carousel-track"
+                  style={{
+                    transform: `translateX(-${tIndex * 100}%)`,
+                  }}
+                >
+                  {TESTIMONIALS.map((item, idx) => (
+                    <figure
+                      key={`${item.author}-${idx}`}
+                      className="testimonial-card carousel-slide"
+                      aria-current={idx === tIndex ? 'true' : undefined}
+                    >
+                      <span className="testimonial-quote-mark">&ldquo;</span>
+                      <blockquote className="testimonial-quote">
+                        {item.quote}
+                      </blockquote>
+                      <figcaption className="testimonial-meta">
+                        <span className="testimonial-author">{item.author}</span>
+                        <span className="testimonial-role">{item.role}</span>
+                      </figcaption>
+                    </figure>
+                  ))}
+                </div>
+              </div>
+              <div className="carousel-controls">
+                <button
+                  type="button"
+                  className="carousel-btn"
+                  aria-label="Previous review"
+                  onClick={() => goSlide(-1)}
+                >
+                  <span aria-hidden="true">&larr;</span>
+                </button>
+                <div className="carousel-dots" role="tablist">
+                  {TESTIMONIALS.map((_, idx) => (
+                    <button
+                      key={`dot-${idx}`}
+                      type="button"
+                      role="tab"
+                      aria-selected={idx === tIndex}
+                      aria-label={`Show review ${idx + 1}`}
+                      className={
+                        'carousel-dot' + (idx === tIndex ? ' is-active' : '')
+                      }
+                      onClick={() => setTIndex(idx)}
+                    />
+                  ))}
+                </div>
+                <button
+                  type="button"
+                  className="carousel-btn"
+                  aria-label="Next review"
+                  onClick={() => goSlide(1)}
+                >
+                  <span aria-hidden="true">&rarr;</span>
+                </button>
+              </div>
             </div>
           </div>
         </section>
         <section id="contact" className="quote-wizard">
+          <p className="snap-finance-note">Snap Finance Available</p>
           <div className="quote-wizard-container">
             <div className="quote-wizard-header">
               <h2 className="section-title">GET A QUOTE</h2>
@@ -375,6 +445,34 @@ const Home = (props) => {
                       <span className="quote-service-desc">
                         Computer diagnostics and bumper-to-bumper maintenance wrapped
                         into Transmission &amp; Auto Repair appointments
+                      </span>
+                    </div>
+                  </label>
+                  <label className="quote-service-card">
+                    <input type="radio" name="service" value="inspection" />
+                    <div className="quote-service-card-inner">
+                      <span className="quote-service-icon">
+                        <svg
+                          width="32"
+                          xmlns="http://www.w3.org/2000/svg"
+                          height="32"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        >
+                          <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2" />
+                          <rect x="9" y="3" width="6" height="4" rx="1" />
+                          <path d="M9 12h6M9 16h6M9 8h2M15 8h2" />
+                        </svg>
+                      </span>
+                      <span className="quote-service-title">
+                        SCHEDULE A VEHICLE INSPECTION
+                      </span>
+                      <span className="quote-service-desc">
+                        Get a comprehensive check-up before major issues arise.
                       </span>
                     </div>
                   </label>
@@ -564,13 +662,13 @@ const Home = (props) => {
             </form>
           </div>
         </section>
-        <section className="location-section">
-          <div className="location-container">
+        <section id="coverage" className="location-section">
+          <div className="location-container location-split">
             <div className="location-card">
               <div className="location-content">
                 <span className="location-eyebrow">SERVICE AREA</span>
                 <h2 className="section-title location-title">
-                  GLENDALE HQ &amp; WEST VALLEY COVERAGE
+                  Glendale HQ &amp; West Valley Coverage
                 </h2>
                 <p className="location-description">
                   Family-owned Transmission &amp; Auto Repair from 5600 Grand Ave
@@ -606,6 +704,54 @@ const Home = (props) => {
                 </a>
               </div>
             </div>
+            <div className="location-map-shell">
+              <iframe
+                className="location-map-iframe"
+                title="Glendale HQ — AZ Quality Transmissions, 5600 Grand Ave"
+                src={MAP_EMBED_SRC}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
+          </div>
+        </section>
+        <section
+          id="process"
+          className="expertise-grid expertise-how-it-works how-it-works-bottom"
+        >
+          <div className="expertise-container">
+            <h2 className="expertise-heading section-title">HOW IT WORKS</h2>
+            <div className="expertise-layout">
+              <div className="expertise-card">
+                <div className="expertise-card-content">
+                  <h3 className="section-subtitle">01. DIAGNOSTICS &amp; ESTIMATE</h3>
+                  <p className="section-content">
+                    Complimentary transmission checks plus computer diagnostics
+                    where needed—we explain findings and outline options before any
+                    work begins.
+                  </p>
+                </div>
+              </div>
+              <div className="expertise-card">
+                <div className="expertise-card-content">
+                  <h3 className="section-subtitle">02. AUTHORIZED REPAIR OR REBUILD</h3>
+                  <p className="section-content">
+                    After you approve the plan, specialists rebuild or repair with
+                    quality parts and disciplined procedures—focused on longevity.
+                  </p>
+                </div>
+              </div>
+              <div className="expertise-card">
+                <div className="expertise-card-content">
+                  <h3 className="section-subtitle">03. ROAD-TESTED QUALITY</h3>
+                  <p className="section-content">
+                    Every vehicle is road-tested, results reviewed with you, and
+                    backed by our 2-year unlimited mileage warranty where
+                    applicable.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
         <div className="home-container2">
@@ -637,7 +783,7 @@ const Home = (props) => {
     })
   }, observerOptions)
 
-  document.querySelectorAll(".expertise-card, .testimonial-card").forEach((el) => {
+  document.querySelectorAll(".core-service-card, .expertise-card").forEach((el) => {
     el.style.opacity = "0"
     el.style.transform = "translateY(20px)"
     el.style.transition = "all 0.5s ease-out"

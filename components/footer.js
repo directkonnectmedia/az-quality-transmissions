@@ -17,9 +17,6 @@ const Footer = (props) => {
                     alt="AZ Quality Transmissions logo"
                     className="footer-brand-logo"
                   />
-                  <h2 className="footer-logo section-title" aria-hidden="true">
-                    AZ QUALITY TRANSMISSIONS
-                  </h2>
                 </div>
                 <p className="footer-mission section-content">
                   Family-owned Transmission &amp; Auto Repair in Glendale. Free basic
